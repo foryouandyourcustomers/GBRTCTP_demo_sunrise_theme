@@ -1,0 +1,13 @@
+<div class="col-xs-12">
+	<ul class="geberit-list geberit-list_columns">
+		{{#each productdeliverycontents.included}}
+		<li>
+		  {{text}}
+		</li>
+		{{/each}}
+	</ul>
+
+	<div class="alert alert-info">
+		<p>{{productdeliverycontents.notIncluded}}</p> 
+	</div>
+</div>

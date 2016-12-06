@@ -63,6 +63,7 @@ reviews:
 description:
   show: Mehr
   hide: Weniger
+  title: Produktbeschreibung
 details:
   title: Produktdetails
 delivery:
@@ -80,3 +81,15 @@ removeBtn:
   title: Entfernen
 contactUs:
   title: Kontaktieren Sie uns
+technicaldata:
+  title: Technische Daten
+applications:
+  title: Empfohlene Verwendungsbereiche
+deliverycontents:
+  title: Lieferumfang
+accessories:
+  title: Zubehör
+assembling:
+  title: Montage
+variants:
+  title: Artikel

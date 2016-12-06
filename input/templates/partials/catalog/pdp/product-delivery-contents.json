@@ -1,0 +1,33 @@
+{
+	"included" : [
+		{
+			"text" : "Spülkastenelement mit Front- und Seitenverkleidung"
+		},
+		{
+			"text" : "Wasseranschluss-Set unten, mit 2 Eckventilen"
+		},
+		{
+			"text" : "Spülbogenverlängerung ø 160 mm"
+		},
+		{
+			"text" : "P-Abgangsbogen, PP, ø 90 mm"
+		},
+		{
+			"text" : "Übergangsmuffe, PE, ø 90/110 mm"
+		},
+		{
+			"text" : "Gummimanschette EPDM"
+		},
+		{
+			"text" : "Kupplungsbuchse für Netzanschluss"
+		},
+		{
+			"text" : "Netzteil"
+		},
+		{
+			"text" : "Befestigungsmaterial"
+		}
+	],
+	"notIncluded" : "Geberit Kombinationsanschlussdose für Kombination mit Geberit AquaClean Sela bodenstehend."
+
+}

@@ -1,0 +1,41 @@
+<div id="my-account-desktop-content" class="col-xs-12">
+	<div class="my-orders-content">
+		<div class="my-orders-table-wrapper">
+			<div class="row">
+				<div class="col-sm-2 hidden-xs">
+					<div class="my-orders-table-titles">
+					&nbsp;
+					</div>
+				</div>
+				<div class="col-sm-2 col-xs-4">
+					<div class="my-orders-table-titles">
+					Artikelnummer
+					</div>
+				</div>
+				<div class="col-sm-2 hidden-xs">
+					<div class="my-orders-table-titles">
+					Farbe
+					</div>
+				</div>
+				<div class="col-sm-2 col-xs-4">
+					<div class="my-orders-table-titles">
+					vRG
+					</div>
+				</div>
+				<div class="col-sm-2 hidden-xs">
+					<div class="my-orders-table-titles">
+					Verfügbarkeit
+					</div>
+				</div>
+				<div class="col-sm-2 col-xs-4">
+					<div class="my-orders-table-titles">
+					&nbsp;
+					</div>
+				</div>
+			</div>
+		</div>
+		{{#each content.variants.list}}
+			{{> catalog/product-table thumbnail=this index=@index}}
+		{{/each}}
+	</div>
+</div>

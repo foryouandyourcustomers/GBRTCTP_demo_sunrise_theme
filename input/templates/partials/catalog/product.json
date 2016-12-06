@@ -133,5 +133,26 @@
             }
         }
     ],
-    "availability": "available"
+    "availability": "available",
+    "topapplications" : {
+        "$ref": "pdp/product-top-applications.json"
+    },
+    "productdescription":  {
+        "$ref": "pdp/product-description.json"
+    },
+    "technicalData":  {
+        "$ref": "pdp/product-technical-data.json"
+    },
+    "applications": {
+        "$ref": "pdp/product-applications.json"
+    },
+    "deliveryContents": {
+        "$ref": "pdp/product-delivery-contents.json"
+    },
+    "highlights": {
+        "$ref": "pdp/product-highlights.json"
+    },
+    "assembling": {
+        "$ref": "pdp/product-assembling.json"  
+    }
 }

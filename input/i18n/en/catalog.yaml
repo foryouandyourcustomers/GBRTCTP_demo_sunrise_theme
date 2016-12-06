@@ -61,6 +61,7 @@ reviews:
 description:
   show: Show more
   hide: Show less
+  title: Product description
 details:
   title: Product Details
 delivery:
@@ -78,3 +79,15 @@ removeBtn:
   title: Remove
 contactUs:
   title: Contact Us
+technicaldata:
+  title: Technical Data
+applications:
+  title: Suggested field of applications
+deliverycontents:
+  title: Delivery Contents
+accessories:
+  title: Accessories
+assembling:
+  title: Assembling
+variants:
+  title: Article

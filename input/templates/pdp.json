@@ -6,9 +6,11 @@
         "product" : { "$ref" : "catalog/product.json" },
         "deliveryRates" : { "$ref" : "catalog/pdp/delivery-rates.json" },
         "suggestions" : { "$ref" : "catalog/product-list4.json" },
+        "accessories" : { "$ref" : "catalog/product-list4.json" },
         "reviews" : { "$ref" : "catalog/pdp/reviews.json" },
         "wishlist" : { "$ref" :  "common/wishlist.json" },
-        "reserveInStoreUrl" : "reserve-in-store.html"
+        "reserveInStoreUrl" : "reserve-in-store.html",
+        "variants" : { "$ref" : "catalog/product-list4.json" }
     },
     "meta" : { "$ref" : "common/meta.json" }
 }

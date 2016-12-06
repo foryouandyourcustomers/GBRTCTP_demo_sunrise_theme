@@ -6,7 +6,7 @@
 
 .header {
   height: 50px;
-  background: $ebony-clay;
+  background: #023868;
 //  overflow: hidden;
   z-index: 9999;
   position: relative;
@@ -56,10 +56,16 @@
     height: 50px;
     text-align: center;
     border-right: solid 1px #404953;
+    font-weight: bold;
 
     @media screen and (min-width: 768px) {
       width: inherit;
       text-align: left;
+      background-color: #295083;
+      &:hover,
+      &:focus {
+        background-color: #3a75c4;
+      }
     }
 
     > a,
@@ -114,10 +120,10 @@
     }
 
     @media screen and (min-width: 768px) {
-      border: none;
+      border: 1px solid #023868;
 
       .store-select {
-        color: $bombay;
+        color: $white;
         padding: 15px 10px 15px 0;
         font-size: 12px;
 
@@ -139,7 +145,7 @@
     display: none;
 
     .link-help {
-      color: $bombay;
+      color: $white;
       padding: 15px 10px;
       font-size: 12px;
 
@@ -159,7 +165,7 @@
     display: none;
 
     .link-hotline {
-      color: $bombay;
+      color: $white;
       padding: 15px 10px;
       font-size: 12px;
 
@@ -266,13 +272,14 @@
     }
 
     @media screen and (min-width: 768px) {
+
       .link-user {
         padding: 15px 20px;
-
+        
         &:hover,
-        &:focus {
-          background: #353e49;
-        }
+          &:focus {
+            background: #3a75c4;
+          }
 
         &.icon-user::before {
           font-size: 26px;
@@ -326,8 +333,8 @@
       }
 
       &.not-empty {
-        color: $mine-shaft;
-        background: $my-sin;
+        color: $white;
+        background: #285086;
 
         .cart-item-number {
           color: $white;
@@ -337,7 +344,7 @@
         @media screen and (min-width: 768px) {
           &:hover,
           &:focus {
-            background: #ffc447;
+            background: #3a75c4;
           }
         }
       }
@@ -381,7 +388,7 @@
   img
   {
     width: 100%;
-    max-width: 220px;
+    max-width: 150px;
     padding: 15px 25px 10px;
 
     @media screen and (min-width: 768px) {
@@ -412,7 +419,7 @@
   .search-field {
     height: 40px;
     width: 100%;
-    background: $spring-wood;
+    background: $white;
     border: 1px solid rgba(170, 174, 178, 0.5);
     border-radius: 2px;
     margin: 0;

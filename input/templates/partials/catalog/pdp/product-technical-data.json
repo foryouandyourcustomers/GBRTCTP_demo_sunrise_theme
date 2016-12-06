@@ -1,0 +1,29 @@
+{
+	"list" : [
+		{
+			"attribute" : "Masse",
+			"value" : "101 cm x 48 cm x 10,6 cm"
+		},
+		{
+			"attribute" : "Fliessdruck",
+			"value" : "0,1-10 bar"
+		},
+		{
+			"attribute" : "Maximale Betriebstemperatur Wasser",
+			"value" : "25 °C"
+		},
+		{
+			"attribute" : "Spülmenge Werkseinstellung",
+			"value" : "6 und 3 l"
+		},
+		{
+			"attribute" : "Grosse Spülmenge Einstellbereich",
+			"value" : "4,5 / 6 l"
+		},
+		{
+			"attribute" : "Nennspannung",
+			"value" : "100-240 V AC"
+		}
+	]
+
+}

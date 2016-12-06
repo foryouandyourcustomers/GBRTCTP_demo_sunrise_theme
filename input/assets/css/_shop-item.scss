@@ -22,13 +22,18 @@
     text-transform: none;
     padding: 0 20px;
     min-height: 50px;
-    color: $gray;
+    font-size: 14px;
+    color: #285086;
+    line-height: 18px;
     .name-headline,
     .name-subline {
       display: block;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+    .name-headline {
+      font-weight: bold;
     }
   }
   .pop-item-price {

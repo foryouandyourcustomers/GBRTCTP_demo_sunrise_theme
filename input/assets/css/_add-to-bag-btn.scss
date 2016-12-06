@@ -1,12 +1,13 @@
 .add-to-bag-btn {
   margin-right: 10px;
   font-weight: 900;
-  background: $my-sin;
+  background: #3a75c4;
   padding: 5px 30px 2px;
   text-transform: uppercase;
   font-size: 17px;
+  color: $white;
   &:hover {
-    background: lighten($my-sin, 5%);
+    background: #00386b;
   }
 }
 .bag-thumb {

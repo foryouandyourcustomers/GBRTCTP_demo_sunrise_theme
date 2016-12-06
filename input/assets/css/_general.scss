@@ -66,8 +66,8 @@ html {
 }
 
 body {
-  background-color: $spring-wood;
-
+  background-color: $white;
+  color: #84909D;
 	/* Margin bottom by footer height */
   margin-bottom: 50px;
   font-family: 'Source Sans Pro', sans-serif;
@@ -86,6 +86,8 @@ body {
 	// Font rendering optimization
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-size: 16px;
 }
 
 // Removes border on focus
@@ -171,4 +173,8 @@ button {
 
 .push-left {
 	float: left;
+}
+
+h1, h2, h3, h4 {
+  color: #285086;
 }

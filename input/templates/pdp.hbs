@@ -24,18 +24,106 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <p class="text-center text-uppercase may-like">{{i18n "catalog:suggestions.title"}}</p>
+          <p class="may-like">{{i18n "catalog:description.title"}}</p>
+        </div>
+      </div>
+      <div class="row margin-bottom">
+        {{> catalog/pdp/product-description productdescription=content.product.productdescription}}
+      </div>
+    </div>
+  </div>
+  <div class="pdp-page-review">
+    <div class="container">
+      <div class="row">
+        {{> catalog/pdp/product-highlights producthighlights=content.product.highlights}}
+      </div>
+    </div>
+  </div>
+   <div class="pdp-page-review">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <p class="may-like">{{i18n "catalog:technicaldata.title"}}</p>
         </div>
       </div>
       <div class="row">
-        {{> catalog/suggestions}}
+        <div class="col-xs-12">
+          <div class="section">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                {{> catalog/pdp/product-technical-data technicalData=content.product.technicalData}}
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <p class="">{{i18n "catalog:applications.title"}}</p>
+                {{> catalog/pdp/product-applications applications=content.product.applications}}
+              </div>
+               <div class="col-xs-12 col-sm-6">
+                <h3>{{i18n "catalog:assembling.title"}}</h3>
+                {{> catalog/pdp/product-assembling assembling=content.product.assembling}}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <hr class="hr">
-      {{> catalog/pdp/reviews}}
     </div>
   </div>
-  {{> common/wishlist wishlist=content.wishlist}}
 
+   <div class="pdp-page-review">
+    <div class="container margin-bottom">
+      <div class="section">
+        <div class="row">
+          <div class="col-sm-12">
+            <p class="may-like">{{i18n "catalog:deliverycontents.title"}}</p>
+          </div>
+        </div>
+        <div class="row">
+          {{> catalog/pdp/product-delivery-contents productdeliverycontents=content.product.deliveryContents}}
+        </div>
+      </div>
+    </div>
+  </div>
+   <div class="pdp-page-review">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <p class="may-like">{{i18n "catalog:variants.title"}}</p>
+          </div>
+        </div>
+        <div class="row">
+            {{> catalog/pdp/product-variants}}
+        </div>
+    </div>
+
+  <div class="bg-gray">
+     <div class="pdp-page-review">
+      <div class="container">
+       <div class="section">
+        <div class="row">
+          <div class="col-sm-12">
+            <p class="may-like">{{i18n "catalog:accessories.title"}}</p>
+          </div>
+        </div>
+        <div class="row">
+            {{> components/accessories}}
+        </div>
+      </div>
+    </div>
+
+   
+      <div class="pdp-page-review">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <p class="may-like">{{i18n "catalog:suggestions.title"}}</p>
+            </div>
+          </div>
+          <div class="row">
+            {{> catalog/suggestions}}
+        </div>
+       </div>
+      </div>
+    </div>
+  </div>
   {{> common/footer}}
   {{> common/htmlscripts}}
 </body>
