@@ -9,8 +9,7 @@
         "accessories" : { "$ref" : "catalog/product-list4.json" },
         "reviews" : { "$ref" : "catalog/pdp/reviews.json" },
         "wishlist" : { "$ref" :  "common/wishlist.json" },
-        "reserveInStoreUrl" : "reserve-in-store.html",
-        "variants" : { "$ref" : "catalog/product-variants.json" }
+        "reserveInStoreUrl" : "reserve-in-store.html"
     },
     "meta" : { "$ref" : "common/meta.json" }
 }

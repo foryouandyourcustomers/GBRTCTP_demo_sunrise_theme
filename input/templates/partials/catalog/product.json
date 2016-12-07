@@ -174,5 +174,12 @@
     },
     "assembling": {
         "$ref": "pdp/product-assembling.json"  
-    }
+    },
+     "allVariants": 
+    [
+		{ "$ref" : "product-variant.json" },
+		{ "$ref" : "product-variant.json" },
+		{ "$ref" : "product-variant.json" },
+		{ "$ref" : "product-variant.json" }
+	]
 }
