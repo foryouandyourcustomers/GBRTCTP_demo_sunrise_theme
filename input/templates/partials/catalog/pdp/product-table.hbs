@@ -9,22 +9,22 @@
 				</div>
 				<div class="col-sm-2 col-xs-4">
 					<div class="my-orders-table-titles">
-					Artikelnummer
+					{{i18n "catalog:variants.tableHeaderArticleNumber"}}
 					</div>
 				</div>
 				<div class="col-sm-2 hidden-xs">
 					<div class="my-orders-table-titles">
-					Farbe
+					{{i18n "catalog:variants.tableHeaderColor"}}
 					</div>
 				</div>
 				<div class="col-sm-2 col-xs-4">
 					<div class="my-orders-table-titles">
-					vRG
+					{{i18n "catalog:variants.tableHeaderVrg"}}
 					</div>
 				</div>
 				<div class="col-sm-2 hidden-xs">
 					<div class="my-orders-table-titles">
-					Verfügbarkeit
+					{{i18n "catalog:variants.tableHeaderAvailability"}}
 					</div>
 				</div>
 				<div class="col-sm-2 col-xs-4">
@@ -35,7 +35,7 @@
 			</div>
 		</div>
 		{{#each content.variants.list}}
-			{{> catalog/product-table thumbnail=this index=@index}}
+			{{> catalog/pdp/product-table-item item=this index=@index}}
 		{{/each}}
 	</div>
 </div>

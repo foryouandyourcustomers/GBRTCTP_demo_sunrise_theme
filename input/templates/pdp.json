@@ -10,7 +10,7 @@
         "reviews" : { "$ref" : "catalog/pdp/reviews.json" },
         "wishlist" : { "$ref" :  "common/wishlist.json" },
         "reserveInStoreUrl" : "reserve-in-store.html",
-        "variants" : { "$ref" : "catalog/product-list4.json" }
+        "variants" : { "$ref" : "catalog/product-variants.json" }
     },
     "meta" : { "$ref" : "common/meta.json" }
 }

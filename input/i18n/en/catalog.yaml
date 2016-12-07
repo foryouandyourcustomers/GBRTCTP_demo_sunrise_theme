@@ -91,3 +91,9 @@ assembling:
   title: Assembling
 variants:
   title: Article
+  available: Available
+  notAvailable: Not available
+  tableHeaderArticleNumber: Article number
+  tableHeaderColor: Color
+  tableHeaderVrg: vRG 
+  tableHeaderAvailability: Availability

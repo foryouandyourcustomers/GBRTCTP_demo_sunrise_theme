@@ -1,0 +1,7 @@
+{
+      "sku" : "131.202.SI.5",
+      "color" : "Glass weiss",
+      "vrg" : "V2",
+      "availability" : true,
+      "product" : { "$ref" : "product.json" }
+}

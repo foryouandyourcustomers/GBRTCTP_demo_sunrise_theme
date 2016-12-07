@@ -93,3 +93,9 @@ assembling:
   title: Montage
 variants:
   title: Artikel
+  available: Verfügbar
+  notAvailable: Nicht verfügbar
+  tableHeaderArticleNumber: Artikelnummer
+  tableHeaderColor: Farbe
+  tableHeaderVrg: vRG 
+  tableHeaderAvailability: Verfügbarkeit

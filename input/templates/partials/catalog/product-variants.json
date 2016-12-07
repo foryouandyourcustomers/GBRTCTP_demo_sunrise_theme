@@ -1,0 +1,9 @@
+{
+	"list" : [
+		{ "$ref" : "product-variant.json" },
+		{ "$ref" : "product-variant.json" },
+		{ "$ref" : "product-variant.json" },
+		{ "$ref" : "product-variant.json" },
+		{ "$ref" : "product-variant.json" }
+	]
+}
