@@ -2,12 +2,18 @@
 	<ul class="geberit-list geberit-list_columns">
 		{{#each productdeliverycontents.included}}
 		<li>
-		  {{text}}
+		  {{this}}
 		</li>
 		{{/each}}
 	</ul>
 
 	<div class="alert alert-info">
-		<p>{{productdeliverycontents.notIncluded}}</p> 
+		
+		{{#each productdeliverycontents.notIncluded}}
+		<p>
+		  {{this}}
+		</p> 
+		{{/each}}
+		
 	</div>
 </div>
