@@ -98,6 +98,7 @@ $(document).ready(function() {
     event.stopPropagation();
   });
 
+  $('.createPDF').on('click', createPDF);
 });
 
 // Toggling plus and minus icons for mobile navigation menu

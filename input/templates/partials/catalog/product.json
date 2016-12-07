@@ -134,7 +134,7 @@
         }
     ],
     "availability": "available",
-    "topApplications" : 
+    "topApplications" :
              ["Für Wandanschlüsse mit Ablaufhöhe 23 cm ","Für Geberit AquaClean WC-Komplettanlagen ","Für Renovierungen, Um- und Neubauten "]
     ,
     "productdescription":  {
@@ -143,7 +143,7 @@
     "technicalData":  {
         "$ref": "pdp/product-technical-data.json"
     },
-    "applications": 
+    "applications":
        ["Für Wandanschlüsse mit Ablaufhöhe 23 cm ","Für Geberit AquaClean WC-Komplettanlagen ","Für Renovierungen, Um- und Neubauten ","Zur Montage vor Trockenbau- und Massivwänden ","Zum Ausgleichen von Versatz zwischen WC-Anschlüssen und Wandabläufen über etagierten Anschlussstutzen für Wand-WC ","Für Wandanschlüsse mit Ablaufhöhe 23 cm "]
     ,
     "deliveryContents": {
@@ -153,6 +153,9 @@
         "$ref": "pdp/product-highlights.json"
     },
     "assembling": {
-        "$ref": "pdp/product-assembling.json"  
+        "$ref": "pdp/product-assembling.json"
+    },
+    "spareParts": {
+        "$ref": "pdp/product-spare-parts-group.json"
     }
 }

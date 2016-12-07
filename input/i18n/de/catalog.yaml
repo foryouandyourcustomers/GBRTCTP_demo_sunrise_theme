@@ -99,3 +99,5 @@ variants:
   tableHeaderColor: Farbe
   tableHeaderVrg: vRG 
   tableHeaderAvailability: Verfügbarkeit
+spareParts:
+  title: Ersatzteile

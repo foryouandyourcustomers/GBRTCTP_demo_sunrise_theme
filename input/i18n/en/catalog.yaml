@@ -97,3 +97,8 @@ variants:
   tableHeaderColor: Color
   tableHeaderVrg: vRG 
   tableHeaderAvailability: Availability
+spareParts:
+  title: Spare parts
+  tableHeaderPosition: Pos.
+  tableHeaderArticleNumber: Article number
+  tableHeaderName: Article number

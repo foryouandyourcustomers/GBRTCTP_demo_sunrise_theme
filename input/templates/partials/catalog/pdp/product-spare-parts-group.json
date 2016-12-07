@@ -1,0 +1,10 @@
+{
+  "image" : "../../assets/img/cms/u1953.png",
+	"list" : [
+		{ "$ref" : "product-spare-part.json" },
+		{ "$ref" : "product-spare-part.json" },
+		{ "$ref" : "product-spare-part.json" },
+		{ "$ref" : "product-spare-part.json" },
+		{ "$ref" : "product-spare-part.json" }
+	]
+}

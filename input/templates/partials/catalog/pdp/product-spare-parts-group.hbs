@@ -1,0 +1,34 @@
+<div class="col-xs-12 col-sm-3">
+  <img src="{{spareParts.image}}" style="width:100%;" />
+</div>
+<div class="col-xs-12 col-sm-9">
+  	<div class="my-orders-content">
+  		<div class="my-orders-table-wrapper">
+  			<div class="row">
+  				<div class="col-sm-2 col-xs-4">
+  					<div class="my-orders-table-titles">
+  					{{i18n "catalog:spareParts.tableHeaderPosition"}}
+  					</div>
+  				</div>
+  				<div class="col-sm-2">
+  					<div class="my-orders-table-titles">
+  					{{i18n "catalog:spareParts.tableHeaderArticleNumber"}}
+  					</div>
+  				</div>
+  				<div class="col-sm-6 col-xs-4">
+  					<div class="my-orders-table-titles">
+  					{{i18n "catalog:spareParts.tableHeaderName"}}
+  					</div>
+  				</div>
+  				<div class="col-sm-2 col-xs-4">
+  					<div class="my-orders-table-titles">
+  					&nbsp;
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  		{{#each spareParts.list}}
+  			{{> catalog/pdp/product-spare-part item=this index=@index}}
+  		{{/each}}
+  	</div>
+</div>

@@ -22,9 +22,10 @@
   </div>
   <div class="pdp-page-review">
     <div class="container">
+      <a class="createPDF" href="#">create pdf</a>
       <div class="row">
         <div class="col-sm-12">
-          <p class="may-like">{{i18n "catalog:description.title"}}</p>
+          <h2 class="may-like">{{i18n "catalog:description.title"}}</h2>
         </div>
       </div>
       <div class="row margin-bottom">
@@ -43,7 +44,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <p class="may-like">{{i18n "catalog:technicaldata.title"}}</p>
+          <h2 class="may-like">{{i18n "catalog:technicaldata.title"}}</h2>
         </div>
       </div>
       <div class="row">
@@ -54,7 +55,7 @@
                 {{> catalog/pdp/product-technical-data technicalData=content.product.technicalData}}
               </div>
               <div class="col-xs-12 col-sm-6">
-                <p class="">{{i18n "catalog:applications.title"}}</p>
+                <h3>{{i18n "catalog:applications.title"}}</h3>
                 {{> catalog/pdp/product-applications applications=content.product.applications}}
               </div>
                <div class="col-xs-12 col-sm-6">
@@ -69,11 +70,11 @@
   </div>
 
    <div class="pdp-page-review">
-    <div class="container margin-bottom">
+    <div class="container">
       <div class="section">
         <div class="row">
           <div class="col-sm-12">
-            <p class="may-like">{{i18n "catalog:deliverycontents.title"}}</p>
+            <h2 class="may-like">{{i18n "catalog:deliverycontents.title"}}</h2>
           </div>
         </div>
         <div class="row">
@@ -86,7 +87,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <p class="may-like">{{i18n "catalog:variants.title"}}</p>
+            <h2 class="may-like">{{i18n "catalog:variants.title"}}</h2>
           </div>
         </div>
         <div class="row">
@@ -100,7 +101,7 @@
        <div class="section">
         <div class="row">
           <div class="col-sm-12">
-            <p class="may-like">{{i18n "catalog:accessories.title"}}</p>
+            <h2 class="may-like">{{i18n "catalog:accessories.title"}}</h2>
           </div>
         </div>
         <div class="row">
@@ -109,12 +110,12 @@
       </div>
     </div>
 
-   
+
       <div class="pdp-page-review">
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <p class="may-like">{{i18n "catalog:suggestions.title"}}</p>
+              <h2 class="may-like">{{i18n "catalog:suggestions.title"}}</h2>
             </div>
           </div>
           <div class="row">
@@ -124,6 +125,20 @@
       </div>
     </div>
   </div>
+  <div class="pdp-page-review">
+   <div class="container">
+
+     <div class="row">
+       <div class="col-sm-12">
+         <h2 class="may-like">{{i18n "catalog:spareParts.title"}}</h2>
+       </div>
+     </div>
+     <div class="row margin-bottom">
+         {{> catalog/pdp/product-spare-parts-group spareParts=content.product.spareParts}}
+     </div>
+
+ </div>
+
   {{> common/footer}}
   {{> common/htmlscripts}}
 </body>
