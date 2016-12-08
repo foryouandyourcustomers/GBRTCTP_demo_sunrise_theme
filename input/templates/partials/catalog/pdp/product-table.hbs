@@ -34,7 +34,7 @@
 				</div>
 			</div>
 		</div>
-		{{#each content.variants.list}}
+		{{#each content.product.allVariants}}
 			{{> catalog/pdp/product-table-item item=this index=@index}}
 		{{/each}}
 	</div>

@@ -137,9 +137,29 @@
     "topApplications" :
              ["Für Wandanschlüsse mit Ablaufhöhe 23 cm ","Für Geberit AquaClean WC-Komplettanlagen ","Für Renovierungen, Um- und Neubauten "]
     ,
-    "productdescription":  {
-        "$ref": "pdp/product-description.json"
-    },
+    "characteristics": [
+
+			"Sanitärmodul mit Frontverkleidung aus Glas und Seitenverkleidung aus Aluminium gebürstet",
+			"Aluminium gebürstet",
+			"Selbsttragend",
+			"Ausgleich von Bautoleranzen",
+			"Höhenausgleich ± 1 cm",
+			"2-Mengen-Spülung",
+			"Spülmenge einstellbar",
+			"Unterputzspülkasten schwitzwassergedämmt",
+			"Wasseranschluss unten",
+			"Wasseranschluss seitlich möglich",
+			"Soft-Touch-Tasten für Spülauslösung und Geruchsabsaugung",
+			"ComfortLight und Geruchsabsaugung aktivieren sich beim Herantreten",
+			"ComfortLight in sieben Farben einstellbar",
+			"Erfassungsbereich der Benutzererkennung einstellbar",
+			"Tag- und Nachterkennung für ComfortLight einstellbar",
+			"Geruchsabsaugung mit Filtration im Spülkasten integriert",
+			"Automatisches Ausschalten der Geruchsabsaugung nach vordefinierter Laufzeit",
+			"Netzanschluss mit dreiadriger flexibler Mantelleitung"
+
+
+	],
     "technicalData":  {
         "$ref": "pdp/product-technical-data.json"
     },
@@ -157,5 +177,12 @@
     },
     "spareParts": {
         "$ref": "pdp/product-spare-parts-group.json"
-    }
+    },
+     "allVariants":
+    [
+		{ "$ref" : "product-variant.json" },
+		{ "$ref" : "product-variant.json" },
+		{ "$ref" : "product-variant.json" },
+		{ "$ref" : "product-variant.json" }
+	]
 }

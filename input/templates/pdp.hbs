@@ -22,14 +22,14 @@
   </div>
   <div class="pdp-page-review">
     <div class="container">
-      <a class="createPDF" href="#">create pdf</a>
+      <!-- <a class="createPDF" href="#">create pdf</a> -->
       <div class="row">
         <div class="col-sm-12">
           <h2 class="may-like">{{i18n "catalog:description.title"}}</h2>
         </div>
       </div>
       <div class="row margin-bottom">
-        {{> catalog/pdp/product-description productdescription=content.product.productdescription}}
+        {{> catalog/pdp/product-characteristics characteristics=content.product.characteristics}}
       </div>
     </div>
   </div>
@@ -52,7 +52,7 @@
           <div class="section">
             <div class="row">
               <div class="col-xs-12 col-sm-6">
-                {{> catalog/pdp/product-technical-data technicalData=content.product.technicalData}}
+                {{> catalog/pdp/product-technical-data technicalData=content.product.details}}
               </div>
               <div class="col-xs-12 col-sm-6">
                 <h3>{{i18n "catalog:applications.title"}}</h3>
