@@ -1,7 +1,6 @@
 function createPDF() {
   var templateString = `
 <html>
-
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -9,70 +8,64 @@ function createPDF() {
   <meta name='description' content=''>
   <meta name='author' content=''>
   <meta name='generator' content='commercetools' />
-  <link rel='icon' href='{{meta.assetsPath}}img/favicon.ico'>
-  <link href='{{meta.assetsPath}}css/print.css' rel='stylesheet'>
+  <link rel='icon' href='{{meta.absolutePath}}{{meta.assetsPath}}img/favicon.ico'>
+  <link href='{{meta.absolutePath}}{{meta.assetsPath}}css/print.css' rel='stylesheet'>
   <title>{{header.title}}</title>
 </head>
 
 <body>
-  <header id='page-header'>
-    <a href='{{meta._links.home.href}}' class='brand-logo pull-right'>
-      <img style='width: 160px;float: right;' src='{{meta.assetsPath}}img/logo.svg' alt='Geberit'>
-    </a>
-  </header>
-  <div class='front-page'>
-    <h1>Geberit<br>Mein<br>Katalog </h1>
-  </div>
-  <div class='page-break'></div>
-  <div class='cart-page'>
-    <table>
+<header id='page-header'>
+  <a href='{{meta.absolutePath}}{{meta._links.home.href}}' class='brand-logo pull-right'>
+    <img style='width: 160px;float: right;' src='{{meta.absolutePath}}{{meta.assetsPath}}img/logo.svg' alt='Geberit'>
+  </a>
+</header>
+<div class='front-page'>
+  <h1>Geberit<br>Mein<br>Katalog </h1>
+</div>
+<div class='page-break'></div>
+<div class='cart-page'>
+  <table>
 
-      {{#each cart.lineItems.list}}
-        <tr class='item'>
-          <td>
-            <img style='width:80px;' src='{{variant.image}}' alt='{{variant.name}}'>
+    {{#each content.cart.lineItems.list}}
+      <tr class='item'>
+        <td>
+          <img style='width:80px;' src='{{meta.absolutePath}}{{variant.image}}' alt='{{variant.name}}'>
 
-          </td>
-          <td>
-            <p class='cart-item-name'>
-              <a href='{{variant.url}}'>{{variant.name}}</a>
-            </p>
-            <p class='grey-p'>{{variant.sku}}</p>
-            <p class='cart-attributes'>
-              {{#each attributes}}
-                {{name}}
-                <span class='black-p' data-model='cartItem.{{key}}'>{{value}}</span>
-                {{#unless @last}}<br>{{/unless}}
-              {{/each}}
-            </p>
-            {{#unless ../ordered}}x^
-              <p class='cart-item-availability grey-p'>
-                <span class='glyphicon glyphicon-ok-sign'></span>verfügbar
-              </p>
-            {{/unless}}
-          </td>
+        </td>
+        <td>
+          <p class='cart-item-name'>
+            <a href='{{meta.absolutePath}}{{variant.url}}'>{{variant.name}}</a>
+          </p>
+          <p class='grey-p'>{{variant.sku}}</p>
+          <p class='cart-attributes'>
+            {{#each attributes}}
+              {{name}}
+              <span class='black-p' data-model='cartItem.{{key}}'>{{value}}</span>
+              {{#unless @last}}<br>{{/unless}}
+            {{/each}}
+          </p>
+        </td>
+        <td>
+          <div class='text-right cart-item-price'>
+            <span class='visible-xs xs-price-title'>Preis</span>
+            {{#if variant.priceOld}}
+              <span class='discounted-price'>{{variant.priceOld}}</span>
+            {{/if}}
+            <span>{{variant.price}}</span>
+          </div>
+        </td>
+        <td>
+          <div class='text-right cart-item-price'>
+            <span class='visible-xs xs-price-title'>Summe</span>
+            <span>{{totalPrice}}</span>
+          </div>
+        </td>
+      </tr>
+    {{/each}}
 
-          <td>
-            <div class='text-right cart-item-price'>
-              <span class='visible-xs xs-price-title'>Preis</span>
-              {{#if variant.priceOld}}
-                <span class='discounted-price'>{{variant.priceOld}}</span>
-              {{/if}}
-              <span>{{variant.price}}</span>
-            </div>
-          </td>
-          <td>
-            <div class='text-right cart-item-price'>
-              <span class='visible-xs xs-price-title'>Summe</span>
-              <span>{{totalPrice}}</span>
-            </div>
-          </td>
-        </tr>
-      {{/each}}
+  </table>
 
-    </table>
-
-  </div>
+</div>
 
 </body>
 
@@ -80,6 +73,7 @@ function createPDF() {
 `;
 
   $.getJSON("../../assets/fonts/staticCartExample.json", function(data){
+    data.meta.absolutePath = window.location.origin + window.location.pathname + "/../";
     var formData = {
       "paperSize": {
         "format": "A4",
@@ -94,14 +88,16 @@ function createPDF() {
     console.dir(formData);
     $.ajax({
       type: "POST",
-      url: "https://pdf.sphere.io/api/pdf/url",
+      // need a local instance for developing (local build not accessible from the cloud PDF gen)
+      url: "http://localhost:3999/api/pdf/url",
+      // url: "https://pdf.sphere.io/api/pdf/url",
       data: JSON.stringify(formData),
       success: function(data){
-        console.log(data);
-        // window.location = data.url;
-        window.open(data.url);
+        // console.log(data);
+        window.location = data.url;
       },
-      dataType: "json"
+      dataType: "json",
+      contentType : "application/json"
     });
   });
 
