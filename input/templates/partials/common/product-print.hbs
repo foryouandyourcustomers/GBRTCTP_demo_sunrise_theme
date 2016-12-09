@@ -1,0 +1,46 @@
+<table>
+
+  {{#each cart.lineItems.list}}
+      <tr class="item">
+          <td>
+              <img style="width:80px;" src="{{variant.image}}" alt="{{variant.name}}">
+              
+          </td>
+          <td>
+              <p class="cart-item-name">
+                <a href="{{variant.url}}">{{variant.name}}</a>
+              </p>
+              <p class="grey-p">{{variant.sku}}</p>
+              <p class="cart-attributes">
+              {{#each attributes}}
+                  {{name}}
+                  <span class="black-p" data-model="cartItem.{{key}}">{{value}}</span>
+                  {{#unless @last}}<br>{{/unless}}
+              {{/each}}
+              </p>
+            {{#unless ../ordered}}
+                <p class="cart-item-availability grey-p">
+                    <span class="glyphicon glyphicon-ok-sign"></span>{{i18n "catalog:availability.available"}}
+                </p>
+            {{/unless}}
+          </td>
+
+          <td>
+              <div class="text-right cart-item-price">
+                  <span class="visible-xs xs-price-title">{{i18n "main:common.price"}}</span>
+                {{#if variant.priceOld}}
+                    <span class="discounted-price">{{variant.priceOld}}</span>
+                {{/if}}
+                  <span>{{variant.price}}</span>
+              </div>
+          </td>
+          <td>
+              <div class="text-right cart-item-price">
+                  <span class="visible-xs xs-price-title">{{i18n "checkout:total"}}</span>
+                  <span>{{totalPrice}}</span>
+              </div>
+          </td>
+      </tr>
+  {{/each}}
+
+</table>

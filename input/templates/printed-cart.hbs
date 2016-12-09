@@ -1,0 +1,23 @@
+<html>
+
+<head>
+  {{> common/htmlheadprint}}
+</head>
+
+<body>
+  <header id="page-header">
+    <a href="{{@root.meta._links.home.href}}" class="brand-logo pull-right">
+      <img style="width: 160px;float: right;" src="{{@root.meta.assetsPath}}img/logo.svg" alt="Geberit">
+    </a>
+  </header>
+  <div class="front-page">
+    <h1>Geberit<br>Mein<br>Katalog </h1>
+  </div>
+  <div class="page-break"></div>
+  <div class="cart-page">
+    {{> common/product-print cart=content.cart }}
+  </div>
+
+</body>
+
+</html>

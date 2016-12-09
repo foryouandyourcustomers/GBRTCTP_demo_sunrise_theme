@@ -4,5 +4,6 @@
     "url": "pdp.html",
     "sku": "Sunrise #SUN123456",
     "priceOld" : "100,00 €",
-    "price" : "49,00 €"
+    "price" : "49,00 €",
+    "product" : { "$ref" : "../common/product.json" }
 }

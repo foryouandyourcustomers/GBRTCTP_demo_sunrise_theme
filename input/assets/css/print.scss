@@ -1,0 +1,35 @@
+@page {
+   size: A4 portrait;
+   margin: 15mm;
+
+   @bottom-center {
+   content: counter(page);
+   }
+   @top-center {
+				content: element(header);
+			}
+
+}
+@page:left{
+  @bottom-left {
+    content: "Page " counter(page) " of " counter(pages);
+  }
+}
+body {
+	background: white;
+	font-size: 12pt;
+}
+#page-header {
+			display: block;
+			position: running(header);
+		}
+.item {
+    page-break-inside: avoid;
+  }
+.page-break {   page-break-after: always;}
+ .front-page {
+   color: #285086 !important;
+   font-size: 30pt;
+   position: absolute;
+   bottom: 0;
+ }

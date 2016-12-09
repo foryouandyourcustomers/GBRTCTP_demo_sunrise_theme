@@ -7,7 +7,8 @@ module.exports = {
      style: 'compressed'
     },
     files: {
-      'output/assets/css/main.min.css' : 'output/assets/css/sass/main.scss'
+      'output/assets/css/main.min.css' : 'output/assets/css/sass/main.scss',
+      'output/assets/css/print.css' : 'output/assets/css/sass/print.scss'
     }
   }
 
