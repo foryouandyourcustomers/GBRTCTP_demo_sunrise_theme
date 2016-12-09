@@ -531,3 +531,40 @@ $(function() {
     $("#my-account-desktop-content").insertAfter("#my-account-mobile-content");
   }
 });
+
+//  PDF Generation COPIED over here for easier publishing to heroku
+
+function createPDF() {
+  var templateString = "\n<html>\n<head>\n  <meta charset='utf-8'>\n  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>\n  <link rel='icon' href='{{meta.absolutePath}}{{meta.assetsPath}}img/favicon.ico'>\n  <link href='{{meta.absolutePath}}{{meta.assetsPath}}css/print.css' rel='stylesheet'>\n  <title>{{header.title}}</title>\n</head>\n\n<body>\n<div id='page-header'>\n  <a href='{{meta.absolutePath}}{{meta._links.home.href}}' class='brand-logo pull-right'>\n    <img style='width: 160px;float: right;' src='{{meta.absolutePath}}{{meta.assetsPath}}img/logo.svg' alt='Geberit'>\n  </a>\n</div>\n<div class='front-page'>\n  <h1>Geberit<br>Mein<br>Katalog </h1>\n</div>\n<!--<div class='page-break'></div>-->\n<div class='cart-page'>\n  <table>\n\n    {{#each content.cart.lineItems.list}}\n      <tr class='item'>\n        <td>\n          <img style='width:80px;' src='{{meta.absolutePath}}{{variant.image}}' alt='{{variant.name}}'>\n\n        </td>\n        <td>\n          <p class='cart-item-name'>\n            <a href='{{meta.absolutePath}}{{variant.url}}'>{{variant.name}}</a>\n          </p>\n          <p class='grey-p'>{{variant.sku}}</p>\n          <p class='cart-attributes'>\n            {{#each attributes}}\n              {{name}}: \n              <span class='black-p' data-model='cartItem.{{key}}'>{{value}}</span>\n              {{#unless @last}}<br>{{/unless}}\n            {{/each}}\n          </p>\n        </td>\n        <td>\n          <div class='text-right cart-item-price'>\n            <span class='visible-xs xs-price-title'>Preis</span>\n            <span>{{variant.price}}</span>\n          </div>\n        </td>\n      </tr>\n    {{/each}}\n\n  </table>\n\n</div>\n\n</body>\n\n</html>\n";
+
+  $.getJSON("../../assets/fonts/staticCartExample.json", function(data){
+    data.meta.absolutePath = window.location.origin + window.location.pathname + "/../";
+    var formData = {
+      "paperSize": {
+        "format": "A4",
+        "orientation": "portrait",
+        "border": "10mm"
+      },
+      "content": templateString,
+      "context": data,
+      "download": true
+    };
+
+    console.dir(formData);
+    $.ajax({
+      type: "POST",
+      // need a local instance for developing (local build not accessible from the cloud PDF gen)
+      // url: "http://localhost:3999/api/pdf/url",
+      url: "https://pdf.sphere.io/api/pdf/url",
+      data: JSON.stringify(formData),
+      success: function(data){
+        // console.log(data);
+        window.location = data.url;
+      },
+      dataType: "json",
+      contentType : "application/json"
+    });
+  });
+
+}
+
