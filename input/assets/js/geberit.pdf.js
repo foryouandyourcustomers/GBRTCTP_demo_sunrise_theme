@@ -1,5 +1,4 @@
 function createPDF() {
-  var cartModel = window.cartModel;
   var templateString = `
 <html>
 
@@ -10,15 +9,15 @@ function createPDF() {
   <meta name='description' content=''>
   <meta name='author' content=''>
   <meta name='generator' content='commercetools' />
-  <link rel='icon' href='{{@root.meta.assetsPath}}img/favicon.ico'>
-  <link href='{{@root.meta.assetsPath}}css/print.css' rel='stylesheet'>
+  <link rel='icon' href='{{meta.assetsPath}}img/favicon.ico'>
+  <link href='{{meta.assetsPath}}css/print.css' rel='stylesheet'>
   <title>{{header.title}}</title>
 </head>
 
 <body>
   <header id='page-header'>
-    <a href='{{@root.meta._links.home.href}}' class='brand-logo pull-right'>
-      <img style='width: 160px;float: right;' src='{{@root.meta.assetsPath}}img/logo.svg' alt='Geberit'>
+    <a href='{{meta._links.home.href}}' class='brand-logo pull-right'>
+      <img style='width: 160px;float: right;' src='{{meta.assetsPath}}img/logo.svg' alt='Geberit'>
     </a>
   </header>
   <div class='front-page'>
@@ -46,7 +45,7 @@ function createPDF() {
                 {{#unless @last}}<br>{{/unless}}
               {{/each}}
             </p>
-            {{#unless ../ordered}}
+            {{#unless ../ordered}}x^
               <p class='cart-item-availability grey-p'>
                 <span class='glyphicon glyphicon-ok-sign'></span>verfügbar
               </p>
@@ -79,26 +78,31 @@ function createPDF() {
 
 </html>
 `;
-  var formData = {
-    "paperSize": {
-      "format": "A4",
-      "orientation": "portrait",
-      "border": "5mm"
-    },
-    "content": templateString,
-    "context": cartModel,
-    "download": true
-  };
 
-  console.log(formData);
-  $.ajax({
-    type: "POST",
-    url: "https://pdf.sphere.io/api/pdf/url",
-    data: JSON.stringify(formData),
-    success: function(data){
-      console.log(data);
-      window.location = data.url;
-    },
-    dataType: "json"
+  $.getJSON("../../assets/fonts/staticCartExample.json", function(data){
+    var formData = {
+      "paperSize": {
+        "format": "A4",
+        "orientation": "portrait",
+        "border": "5mm"
+      },
+      "content": templateString,
+      "context": data,
+      "download": true
+    };
+
+    console.dir(formData);
+    $.ajax({
+      type: "POST",
+      url: "https://pdf.sphere.io/api/pdf/url",
+      data: JSON.stringify(formData),
+      success: function(data){
+        console.log(data);
+        // window.location = data.url;
+        window.open(data.url);
+      },
+      dataType: "json"
+    });
   });
+
 }
