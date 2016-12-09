@@ -1,35 +1,69 @@
+* {
+  vertical-align: baseline;
+  font-weight: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+}
+
 @page {
    size: A4 portrait;
-   margin: 15mm;
+   margin: 10mm;
 
    @bottom-center {
-   content: counter(page);
+     content: counter(page);
    }
-   @top-center {
-				content: element(header);
-			}
-
+   @top-right-corner {
+     content: element(header);
+   }
 }
+
 @page:left{
   @bottom-left {
     content: "Page " counter(page) " of " counter(pages);
   }
 }
+
 body {
-	background: white;
+	background: none;
 	font-size: 12pt;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
 #page-header {
-			display: block;
-			position: running(header);
-		}
-.item {
-    page-break-inside: avoid;
+  position: running(header);
+}
+
+.page-break {
+  page-break-after: always;
+}
+
+.front-page {
+  h1{
+    font-size: 40pt;
+    padding-top: 140mm;
+    color: #285086;
   }
-.page-break {   page-break-after: always;}
- .front-page {
-   color: #285086 !important;
-   font-size: 30pt;
-   position: absolute;
-   bottom: 0;
- }
+  page-break-after: always;
+}
+
+.cart-page {
+  table{
+    width: 100%;
+  }
+  page-break-after: always;
+}
+
+.item {
+  page-break-inside: avoid;
+  td{
+    vertical-align: top;
+    font-size: 10pt;
+    padding: 2mm;
+  }
+}
+
