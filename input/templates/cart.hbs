@@ -3,12 +3,16 @@
 
 <head>
   {{> common/htmlhead}}
+  <script>
+    window.cartModel =  {{{modelAsJsonString}}};
+  </script>
 </head>
 
 <body>
   <div class="darkbg hidden"></div>
   {{> common/header}}
   <div class="cart-page">
+    <a class="btn btn-default createPDF" href="#">CREATE PDF</a>
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-xs-12">

@@ -5,5 +5,6 @@
         "cart" : { "$ref" : "common/cart-like.json" },
         "wishlist" : { "$ref" : "common/wishlist.json" }
     },
-    "meta" : { "$ref" : "common/meta.json" }
+    "meta" : { "$ref" : "common/meta.json" },
+    "modelAsJsonString": "{\"content\": {\"cart\": {\"test\": \"testvalue\"} }}"
 }
